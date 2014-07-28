@@ -255,6 +255,11 @@
 
         instance = this.data( dataPlugin );
 
+        if (!instance) {
+            console.warn("prettyCheckable: Selector returned no results");
+            return;
+        }
+
         instance.element = this;
 
         if (typeof arg === 'undefined' || typeof arg === 'object') {
